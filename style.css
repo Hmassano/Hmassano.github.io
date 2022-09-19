@@ -1,9 +1,5 @@
 #nav-table {width: 1024px;}
 #nav-td {width: 256px; text-align:center;}
 body  {
-  background-image: url("https://github.com/Hmassano/Hmassano.github.io/blob/main/MyBackground-new.jpg?raw=true")
-  background-size: cover;
- background-repeat: no-repeat;
-  background-size: 1024px 768px;
-
+  background-color: #696969;
 }
