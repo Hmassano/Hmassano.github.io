@@ -168,7 +168,7 @@ var initialSpeedX = initialSpeedX;
 var ballSpeedY = initialSpeedY;
 var ballX= 0;
 var ballY= 0;
-
+// variable to pause the game when not on game screen
 var gameIsPaused = false; 
 
 //move this variables to move bricks y and x position
