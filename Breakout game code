@@ -1,0 +1,485 @@
+//BitMojis
+var drawHugoji = function (HugojiX, HugojiY, HugojiSize){
+    ///////head
+    var HugojiSize = HugojiSize;
+noStroke();
+fill (255,205,148);
+    ellipse (HugojiX+(HugojiSize /100*100),HugojiY-(HugojiSize /100*20),(HugojiSize /100*85),(HugojiSize /100*100)); //head
+
+
+noStroke();
+    rect(HugojiX+(HugojiSize /101*88), HugojiY+(HugojiSize /100*24), (HugojiSize /100*28), (HugojiSize /100*27));//neck
+
+stroke(0, 0, 0);
+    arc(HugojiX+(HugojiSize /100*100), HugojiY-(HugojiSize /100*21), (HugojiSize /100*97), (HugojiSize /100*100), 72, 105);
+
+noStroke();
+
+fill (51, 27, 8);
+    quad (HugojiX+(HugojiSize /100*69),HugojiY-(HugojiSize /100*22),HugojiX+(HugojiSize /100*90),HugojiY-(HugojiSize /100*70),HugojiX+(HugojiSize /100*68),HugojiY-(HugojiSize /100*62),HugojiX+(HugojiSize /100*48),HugojiY-(HugojiSize /100*10)); //left hair
+    quad (HugojiX+(HugojiSize /100*148),HugojiY-(HugojiSize /100*10),HugojiX+(HugojiSize /100*124),HugojiY-(HugojiSize /100*31),HugojiX+(HugojiSize /100*108),HugojiY-(HugojiSize /100*71),HugojiX+(HugojiSize /100*133),HugojiY-(HugojiSize /100*63)); //right hair
+    ellipse (HugojiX+(HugojiSize /100*100),HugojiY-(HugojiSize /100*61),(HugojiSize /100*65),(HugojiSize /100*28));//top hair
+fill(181, 163, 181,101);
+    ellipse (HugojiX+(HugojiSize /100*100),HugojiY+(HugojiSize /100*17),(HugojiSize /100*54),(HugojiSize /100*25)); //beard
+    ellipse (HugojiX+(HugojiSize /100*80),HugojiY+(HugojiSize /100*9),(HugojiSize /100*19),(HugojiSize /100*20)); //left beard
+    ellipse (HugojiX+(HugojiSize /100*122),HugojiY+(HugojiSize /100*9),(HugojiSize /100*19),(HugojiSize /100*20)); //right beard
+
+fill (36, 36, 36);
+    ellipse (HugojiX+(HugojiSize /100*100),HugojiY-(HugojiSize /100*60),(HugojiSize /100*80),(HugojiSize /100*36)); //hat
+fill(0, 0, 0);
+    arc(HugojiX+(HugojiSize /100*100), HugojiY-(HugojiSize /100*47), (HugojiSize /100*61), (HugojiSize /100*51), -(HugojiSize /100*8), 190);
+fill(255, 255, 255);
+    rect(HugojiX+(HugojiSize /100*88), HugojiY-(HugojiSize /100*67), (HugojiSize /100*25), (HugojiSize /100*13)); // flag on hat
+stroke(0, 0, 0);
+    line(HugojiX+(HugojiSize /100*112),HugojiY-(HugojiSize /100*62),HugojiX+(HugojiSize /100*98),HugojiY-(HugojiSize /100*62)); //flag stripes
+    line(HugojiX+(HugojiSize /100*112),HugojiY-(HugojiSize /100*59),HugojiX+(HugojiSize /100*87),HugojiY-(HugojiSize /100*59));
+    line(HugojiX+(HugojiSize /100*112),HugojiY-(HugojiSize /100*56),HugojiX+(HugojiSize /100*88),HugojiY-(HugojiSize /100*56));
+    line(HugojiX+(HugojiSize /100*112),HugojiY-(HugojiSize /100*65),HugojiX+(HugojiSize /100*98),HugojiY-(HugojiSize /100*65));
+    line(HugojiX+(HugojiSize /100*87),HugojiY-(HugojiSize /100*61),HugojiX+(HugojiSize /100*95),HugojiY-(HugojiSize /100*61));
+    line(HugojiX+(HugojiSize /100*87),HugojiY-(HugojiSize /100*63),HugojiX+(HugojiSize /100*95),HugojiY-(HugojiSize /100*63));
+    line(HugojiX+(HugojiSize /100*87),HugojiY-(HugojiSize /100*65),HugojiX+(HugojiSize /100*95),HugojiY-(HugojiSize /100*65));
+stroke (0, 0, 0);
+fill (11, 51, 7);
+    ellipse (HugojiX+(HugojiSize /100*86),HugojiY-(HugojiSize /100*19),(HugojiSize /100*8),(HugojiSize /100*8));//left eye
+    ellipse (HugojiX+(HugojiSize /100*113),HugojiY-(HugojiSize /100*19),(HugojiSize /100*8),(HugojiSize /100*8));//right eye
+
+fill (255,205,148);
+    bezier(HugojiX+(HugojiSize /100*99),HugojiY-(HugojiSize /100*15), HugojiX+(HugojiSize /100*122), HugojiY+(HugojiSize /100*5), HugojiX+(HugojiSize /100*90), HugojiY+(HugojiSize /100*3), HugojiX+(HugojiSize /100*94), HugojiY-1);//nose
+
+
+stroke (0, 0, 0);
+fill(255, 255, 255); //teeth
+    arc(HugojiX+(HugojiSize /100*99), HugojiY+(HugojiSize /100*11), (HugojiSize /100*34), (HugojiSize /100*13), -12, 190);// mouth
+    line (HugojiX+(HugojiSize /100*115),HugojiY+(HugojiSize /100*10),HugojiX+(HugojiSize /100*82),HugojiY+(HugojiSize /100*10)); //top of mouth
+    
+    ///////Body
+    
+    var HugojiSize = HugojiSize;
+    
+noStroke();
+fill(61, 61, 61);
+    quad(HugojiX+(HugojiSize /100*60), HugojiY+(HugojiSize /100*38), HugojiX+(HugojiSize /100*138), HugojiY+(HugojiSize /100*38), HugojiX+(HugojiSize /100*163), HugojiY+(HugojiSize /100*71), HugojiX+(HugojiSize /100*38), HugojiY+(HugojiSize /100*72)); //shirt
+    ellipse(HugojiX+(HugojiSize /100*65),HugojiY+(HugojiSize /100*46),HugojiSize-(HugojiSize /100*80),HugojiSize-(HugojiSize /100*80));
+    ellipse(HugojiX+(HugojiSize /100*134),HugojiY+(HugojiSize /100*46),HugojiSize-(HugojiSize /100*80),HugojiSize-(HugojiSize /100*80));
+fill (255,205,148);
+    ellipse(HugojiX+(HugojiSize /100*100),HugojiY+(HugojiSize /100*39),HugojiSize-(HugojiSize /100*70),HugojiSize-(HugojiSize /100*85));//collar of the shirt
+fill(255, 255, 255);
+    textSize ((HugojiSize /100*28));
+    text("HM",HugojiX+(HugojiSize /100*79),HugojiY+(HugojiSize /100*48),HugojiSize-(HugojiSize /100*40),HugojiSize-(HugojiSize /100*30)); //text
+
+
+};
+var broDude = function (Xpos, Ypos, Hpos) { 
+// Shirtish?
+stroke(0, 0, 0);
+
+    var clothingColor = color(130, 138, 130);
+    strokeWeight(5);
+    fill(clothingColor);
+    rect(Xpos+Hpos/150,  Ypos+Hpos/150, Hpos/150*75, Hpos/150*75);
+    rect(Xpos-Hpos/150*20, Ypos+Hpos/150,Hpos/150*20,Hpos/150*40);
+    rect(Xpos+Hpos/150*70, Ypos+Hpos/150,Hpos/150*20,Hpos/150*40);
+
+//shirt
+    strokeWeight(5);
+    fill(232,190,172);
+    triangle(Xpos+Hpos/150*15,Ypos+Hpos/150*5,Xpos+Hpos/150*65,Ypos+Hpos/150*4,Xpos+Hpos/150*35,Ypos+Hpos/150*35);
+
+//neck
+    fill(232,190,172);
+    rect(Xpos+Hpos/150*20,Ypos-Hpos/150*20,Hpos/150*40,Hpos/150*30,0);
+
+//head
+    strokeWeight(5);
+    fill (232,190,172);
+    ellipse(Xpos+Hpos/150*35,Ypos-Hpos/150*35,Hpos/150*60,Hpos/150*80);
+    fill(205, 190, 180);
+    arc(Xpos+Hpos/150*35,Ypos-Hpos/150*27,Hpos/150*58,Hpos/150*58,-Hpos/150*0,180);
+
+//eye right
+    strokeWeight(2);
+    fill(255, 255, 255);
+    ellipse(Xpos+Hpos/150*45,Ypos-Hpos/150*45,Hpos/150*15,Hpos/150*9);
+    fill(205,127,50);
+    ellipse(Xpos+Hpos/150*45,Ypos-Hpos/150*45,Hpos/150*8,Hpos/150*9);
+    fill(255,255,255);
+    ellipse(Xpos+Hpos/150*45,Ypos-Hpos/150*45,Hpos/150*3,Hpos/150*3);
+
+//eye left
+    strokeWeight(2);
+    ellipse(Xpos+Hpos/150*25,Ypos-Hpos/150*45,Hpos/150*15,Hpos/150*9);
+    fill(205, 137, 50);
+    ellipse(Xpos+Hpos/150*25,Ypos-Hpos/150*45,Hpos/150*8,Hpos/150*9);
+    fill(255,255,255);
+    ellipse(Xpos+Hpos/150*25,Ypos-Hpos/150*45,Hpos/150*3,Hpos/150*3);
+
+//nose
+    strokeWeight(2);
+    line(Xpos+Hpos/150*35,Ypos-Hpos/150*30,Xpos+Hpos/150*30,Ypos-Hpos/150*30);
+    line(Xpos+Hpos/150*32,Ypos-Hpos/150*45,Xpos+Hpos/150*30,Ypos-Hpos/150*30);
+    line(Xpos+Hpos/150*38,Ypos-Hpos/150*32,Xpos+Hpos/150*37,Ypos-Hpos/150*30);
+
+//mouth
+    strokeWeight(5);
+    line(Xpos+Hpos/150*40,Ypos-Hpos/150*20,Xpos+Hpos/150*35,Ypos-Hpos/150*20);
+
+//hair
+    stroke(205, 137, 50);
+    line(Xpos+Hpos/150*55,Ypos-Hpos/150*55,Xpos+Hpos/150*12,Ypos-Hpos/150*55);
+
+//Hat
+    strokeWeight(8);
+    stroke(0,0,0);
+    fill(0, 0, 0);
+    line(Xpos+Hpos/150*75,Ypos-Hpos/150*60,Xpos+Hpos/150*15,Ypos-Hpos/150*60);
+    arc(Xpos+Hpos/150*35,Ypos-Hpos/150*60,Hpos/150*50,Hpos/150*50,180,360);
+    
+//name
+    strokeWeight(2);
+    fill(0, 0, 255);
+    line(Xpos+Hpos/150*45,Ypos+Hpos/150*25,Xpos+Hpos/150*45,Ypos+Hpos/150*55);
+    ellipse(Xpos+Hpos/150*55,Ypos+Hpos/150*35,Hpos/150*20,Hpos/150*20);
+    line(Xpos+Hpos/150*25,Ypos+Hpos/150*35,Xpos+Hpos/150*25,Ypos+Hpos/150*55);
+    line(Xpos+Hpos/150*20,Ypos+Hpos/150*55,Xpos+Hpos/150*25,Ypos+Hpos/150*55);
+    line(Xpos+Hpos/150*25,Ypos+Hpos/150*35,Xpos+Hpos/150*15,Ypos+Hpos/150*35);
+
+
+};
+
+//paddle global variables
+
+var PADDLE_HEIGHT = 15;
+var PADDLE_WIDTH = 103;
+var player1X = height/2;
+
+var paddle = function() {
+    //Constrain the player movement
+    player1X = constrain(mouseX, 73, 325);
+    rectMode(CENTER);
+    fill(255, 255, 255);
+    rect(player1X, 386, PADDLE_WIDTH, PADDLE_HEIGHT);
+    rectMode(CORNER);
+};
+
+//ball global variables "in progress"
+var initialSpeedX = 3;
+var initialSpeedY = -3;
+var initialSpeedX = initialSpeedX;
+var ballSpeedY = initialSpeedY;
+var ballX= 0;
+var ballY= 0;
+
+var gameIsPaused = false; 
+
+//move this variables to move bricks y and x position
+var brickX = 28;
+var brickY = 56;
+var score = 0;
+var lives = 5;
+var currentScene = 1;
+var impactPaddle = 346;
+
+var wallRight = wallRight;
+var wallLeft = wallLeft;
+var wallTop = wallTop;
+
+//score function
+var drawScores = function() {
+    var s;
+
+    fill(255, 255, 255);
+    textSize(20);
+
+    s = "Lives  " + lives;
+    text(s, 35, 26);
+};
+
+//button object
+var Button = function(config) {
+    this.x = config.x || 0;
+    this.y = config.y || 0;
+    this.width = config.width || 130;
+    this.height = config.height || 50;
+    this.label = config.label || "Click";
+    this.onClick = config.onClick || function() {};
+    this.color = config.color || color(212, 144, 212);
+};
+Button.prototype.draw = function() {
+    fill(this.color);
+    rectMode(CORNER);
+    rect(this.x, this.y, this.width, this.height, 5);
+    fill(0, 0, 0);
+    textSize(19);
+    textAlign(LEFT, TOP);
+    text(this.label, this.x+10, this.y+this.height/4);
+};
+Button.prototype.isMouseInside = function() {
+    return mouseX > this.x &&
+           mouseX < (this.x + this.width) &&
+           mouseY > this.y &&
+           mouseY < (this.y + this.height);
+};
+Button.prototype.handleMouseClick = function() {
+    if (this.isMouseInside()) {
+        this.onClick();
+    }
+};
+//start button starts the game
+var startButton = new Button({
+    x: 30,
+    y: 315,
+    color: color(0, 26, 255),
+    label: "  Start here!",
+    onClick: function(){
+        currentScene = 2;
+        playSound(getSound("rpg/battle-swing"));
+    
+    }
+    
+});
+//back button goes back to splash screen
+var backButton = new Button({
+    x: 314,
+    y: 1,
+    height:40,
+    color: color(58, 186, 75),
+    label: "Back",
+    width: 80,
+    onClick: function(){
+        currentScene = 1;
+        playSound(getSound("rpg/battle-swing"));
+    }
+    
+});
+
+//intro screen
+var SplashScreen = function () {
+    currentScene = 1;
+    
+    background(58, 186, 75);
+    
+    fill(0, 0, 0);
+    
+    textSize(20);
+    
+    text("Instructions:", 30, 90, 150, 150);
+    
+    textSize(10);
+    
+    text("SMASH!  POW!  CRUNCH!  A brick wall appears at the top of the screen, and your missions is to smash four walls off the playfield -- one brick at a time. Move the mouse left to right to move the paddle and let the ball bounce off the paddle to hit the bricks. Each time the ball hits a brick, the brick disappears and you score a point of each brick. You will have 5 lives so be careful! When you miss the ball with your paddle, the ball disappears from the screen and you lose a life. DESTROY ALL BRICKS to WIN! Press the Start Button to Begin!", 30,120,200,200);
+
+
+    
+    textSize(12);
+    
+    text("Coded by: Jonathan Piccoli and Hugo Massano.", 135,385);
+    
+    textSize(50);
+    
+    text("Breakout", 15, 18);
+    
+    stroke(0, 0, 0);
+    
+    line(10, 72, 220, 72);
+    
+    drawHugoji(250,100,75);
+    
+    broDude(300,300,100);
+    
+    startButton.draw();
+    
+};
+//Brick is drawn here
+var drawBrick = function(brickPosition) {
+    var brickX = brickPosition.x;
+    var brickY = brickPosition.y;
+    var brickHeight = 20;
+    var brickWidth = 86;
+    fill(255, 255, 0);
+    rect(brickX, brickY, brickWidth,brickHeight );
+};
+//brick positions
+var positions = [
+    //1st column
+  {x: brickX, y: brickY},
+  {x: brickX, y: brickY+21},
+  {x: brickX, y: brickY+42},
+  {x: brickX, y: brickY+63},
+  {x: brickX, y: brickY+84},
+    //2nd column
+  {x: brickX+86, y: brickY},
+  {x: brickX+86, y: brickY+21},
+  {x: brickX+86, y: brickY+42},
+  {x: brickX+86, y: brickY+63},
+  {x: brickX+86, y: brickY+84},
+    //3rd column
+  {x: brickX+172, y: brickY},
+  {x: brickX+172, y: brickY+21},
+  {x: brickX+172, y: brickY+42},
+  {x: brickX+172, y: brickY+63},
+  {x: brickX+172, y: brickY+84},
+  //4th column
+  {x: brickX+258, y: brickY},
+  {x: brickX+258, y: brickY+21},
+  {x: brickX+258, y: brickY+42},
+  {x: brickX+258, y: brickY+63},
+  {x: brickX+258, y: brickY+84},
+];
+
+
+
+
+
+
+//game over if lives are ===0
+var gameOverScreen = function(){
+    currentScene = 3;
+    background(0, 0, 0);
+    fill(247, 8, 8);
+    textSize(59);
+    text("Game over!", 52, 121);
+    fill(0, 170, 255);
+    textSize(35);
+    text("Your score was: " + score, 70, 206);
+    image(getImage("creatures/OhNoes"), 130, 280);
+    
+};
+// you win screen if score === 20
+var congratulationsScreen = function(){
+    currentScene = 4;
+    background(0, 255, 238);
+    fill(255, 230, 0);
+    textSize(59);
+    text("You win!!!", 70, 121);
+    fill(0, 170, 255);
+    textSize(35);
+    text("Your score was: " + score, 70, 206);
+    image(getImage("creatures/Hopper-Jumping"), 130, 280);
+    
+};
+//ball statements
+
+var ballMoving= false;
+
+//function for the background with pillars
+var gameScreen = function(){
+background(196, 196, 196);
+fill(156, 58, 58);
+rect(1, 35, 20, 363); // left pillar
+rect(379, 35, 20, 363); //right pillar
+rect(1, 28, 398, 20); // top pillar
+fill(3, 0, 0);
+textSize(20);
+text ("Score: " + score, 32, 3);
+backButton.draw();
+drawScores();
+paddle();
+if (ballMoving) {
+        ballX +=initialSpeedX;
+        ballY += ballSpeedY;
+    }
+    else {
+    ballX= player1X;
+    ballY= 340;
+    }
+    
+    fill(255,234,0);
+    ellipse(ballX, ballY+30, 15, 15);
+    
+    if (ballY <+30) {
+        ballSpeedY = -ballSpeedY;
+        
+    }
+    
+    if (ballX <=25) {
+       initialSpeedX = -initialSpeedX;
+    }
+    
+    if(ballX >= 375) {
+       initialSpeedX = -initialSpeedX;
+        
+    }
+    if (ballY >=400) {
+        ballSpeedY = -ballSpeedY;
+        lives --;
+        
+        ballMoving= false;
+        
+        
+    }
+    if (lives === 0) {
+        background(8, 0, 0);
+        gameOverScreen();
+        
+    }
+    
+    
+    // Impact paddle has to be exactly 6 numbers appart
+    if (ballY >= impactPaddle && ballY < impactPaddle+6 && ballX >= player1X - PADDLE_WIDTH/2 && ballX <= player1X + PADDLE_WIDTH/2) {
+        ballSpeedY = -ballSpeedY;
+
+    }
+   
+
+};
+
+//this is where the impact of the ball with the brick makes the brick go off the screen
+var checkForBrick = function(brickPosition){
+    if ((ballX >= brickPosition.x && ballX <= (brickPosition.x+80)) &&
+        (ballY >= brickPosition.y && ballY <= (brickPosition.y+10))){
+    brickPosition.x = +500;
+   initialSpeedX = +initialSpeedX;
+    ballSpeedY = -ballSpeedY;
+    score ++;
+    
+    }
+};
+
+// draw function of the game
+draw= function() {
+    if (currentScene === 1){
+        SplashScreen();
+    }
+    if (currentScene === 2){
+        gameScreen();
+      
+        
+    //drawing of the bricks
+    for (var i = 0; i < positions.length; i++) {
+        
+    drawBrick(positions[i]);
+    checkForBrick(positions[i]);
+            if (lives === 0 && currentScene === 2){ //if you run out of lives game over screen will appear
+        gameIsPaused  = true;
+        currentScene = 3;
+}
+    }
+    if (currentScene === 3){
+        gameOverScreen();
+        ballMoving = true;
+       
+        
+        
+    }
+    if (score === 20 && currentScene ===2) {
+    gameIsPaused = true;
+    currentScene = 4;
+    congratulationsScreen();
+    }
+}
+
+//mouse click functions to move from scene to scene using buttons
+mouseClicked = function() {
+    if (currentScene === 1) {
+        startButton.handleMouseClick();
+        }
+        else if (currentScene === 2) {
+        backButton.handleMouseClick();
+        ballMoving = true;
+      
+        }
+       
+        
+        
+    };
+}; 
