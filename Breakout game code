@@ -357,7 +357,7 @@ var congratulationsScreen = function(){
     image(getImage("creatures/Hopper-Jumping"), 130, 280);
     
 };
-//ball statements
+//ball statements 
 
 var ballMoving= false;
 
@@ -427,7 +427,7 @@ if (ballMoving) {
 var checkForBrick = function(brickPosition){
     if ((ballX >= brickPosition.x && ballX <= (brickPosition.x+80)) &&
         (ballY >= brickPosition.y && ballY <= (brickPosition.y+10))){
-    brickPosition.x = +500;
+    brickPosition.x = +500; // This moves the brick 500 to the right removing it from the screen. 
    initialSpeedX = +initialSpeedX;
     ballSpeedY = -ballSpeedY;
     score ++;
