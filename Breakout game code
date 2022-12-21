@@ -374,6 +374,8 @@ text ("Score: " + score, 32, 3);
 backButton.draw();
 drawScores();
 paddle();
+drawHugoji(247,258,67);
+broDude(61,261,90);
 if (ballMoving) {
         ballX +=initialSpeedX;
         ballY += ballSpeedY;
