@@ -298,7 +298,7 @@ var drawBrick = function(brickPosition) {
     fill(255, 255, 0);
     rect(brickX, brickY, brickWidth,brickHeight );
 };
-//brick positions
+//This Section Creates the Brick Layout 
 var positions = [
     //1st column
   {x: brickX, y: brickY},
